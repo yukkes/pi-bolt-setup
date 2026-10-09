@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    "npm:opensec-pi-subagents@0.20.0",
+    "npm:opensec-pi-todo@2.13.0",
+    "npm:@narumitw/pi-goal@0.54.11",
+    "npm:pi-better-footer@0.1.4",
+    "git:github.com/smalibary/pi-native-search"
+  ],
+  "models": {
+    "default": "github-copilot/gpt-6.1-sol",
+    "enabled": [
+      "github-copilot/gpt-6.1-sol",
+      "github-copilot/gpt-6-luna",
+      "github-copilot/claude-opus-5.5"
+    ]
+  },
+  "agents": {
+    "general-purpose": "github-copilot/gpt-6.1-sol",
+    "Explore": "github-copilot/gpt-6-luna",
+    "Plan": "github-copilot/claude-opus-5.5",
+    "Review": "github-copilot/claude-opus-5.5"
+  },
+  "files": {
+    "better-footer.json": { "keepRecentModel": false, "skipExhaustedScopedModels": false },
+    "subagents.json": { "scopeModels": true }
+  }
+}
